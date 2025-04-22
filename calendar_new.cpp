@@ -10,17 +10,13 @@ using namespace std;
 //vector <pair <int, int>> tested_set = { {1, 1919},{2, 1939},  {2, 2024}, {7, 1990}, {1, 2000}, {8, 2040}, {12, 1936}, {4, 2032}, {10, 1975}, {11, 1964}, {6, 2061}, {9, 2015}, {4, 1953}, {2, 2051}, {7, 2005}, {1, 1920}, {3, 1922}, {12, 2069} };
 //vector <int> num_of_days_check = { 31, 28, 29, 31, 31, 31, 31, 30, 31, 30, 30, 30, 30, 28,31, 31, 31, 31 };
 //vector <int> weekday_check = { 2, 2, 3, 6, 5, 2, 1, 3, 2, 6, 2, 1, 2, 2, 4, 3, 2, 6};
-//Ямщикова
 int leap_year(int year) {
     return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
 }
-//Велиев Февзи
 int number_of_days_in_a_month(int month, int year) {
     vector <int> num = {31, 28  + leap_year(year), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     return num[month-1];
 }
-
-//Фесенкo Елизавета
 int weekday(int month, int year) {
     int result = 2;
     if (month -1 == 0 and year == 1919){
@@ -38,7 +34,6 @@ int weekday(int month, int year) {
     return (result+1)%7;
 }
 
-//Ямщикова Наталья
 void calendar(int month, int year) {
     int k = weekday(month, year);
     int n = number_of_days_in_a_month(month, year);
@@ -67,7 +62,6 @@ void calendar(int month, int year) {
       //  assert((number_of_days_in_a_month(tested_set[i].first, tested_set[i].second) == num_of_days_check[i]) && (weekday(tested_set[i].first, tested_set[i].second) == weekday_check[i]));
     //cout << "Тесты пройдены!" << endl;
 //}
-//Ямщикова + Фесенко
 void check_and_run(string month, string year){
     int flag = 1, flag_for_str, count;
     while (flag) {
@@ -100,7 +94,6 @@ vector<int> lcm_check = {7, 392, 40722};
         //assert(gcd(tested_set[i]) == gcd_check[i] && lcm(tested_set[i]) == lcm_check[i]);
     //cout << "Тесты пройдены!" << endl;
 //}
-//Ямщикова + Фесенко
 int maimnn() {
     SetConsoleOutputCP(CP_UTF8);
 //testing_num_days();
